@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'LeferiPoint-BlackObliqueA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackObliqueA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LeferiBaseType-RegularA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    padding-bottom: 10rem;
+}
+
+.description {
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 2rem 0;
+    margin-bottom: 7rem;
+}
+
+.description-imgs {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.flex-row > .description-imgs {
+    width: 10%;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.description-img {
+    width: 0px;
+    flex-grow: 1;
+}
+
+.description-texts {
+    width: fit-content;
+    flex: content;
+    white-space: nowrap;
+    margin-bottom: 1rem;
+}
+
+.description-text {
+    text-align: center;
+}
+
+.description-text-main {
+    font-size: 3rem;
+    font-family: 'LeferiPoint-BlackObliqueA';
+}
+
+.description-text-sub {
+    color: #3d3d3d;
+    font-size: 1.5rem;
+    margin-bottom: -0.5rem;
+    font-family: 'LeferiBaseType-RegularA';
+}
+
+/* ID */
+
+#title > div {
+    font-size: 5rem !important;
+    margin: 6rem 0;
+}
+
+#youtube {
+    margin-top: 2rem;
+    margin-bottom: -3rem;
+    font-size: 1.5rem;
+    width: fit-content;
+}
+
+#youtube > svg {
+    width: 2rem;
+    height: fit-content;
+}
