@@ -1,83 +1,279 @@
+/******* FONT *******/
+
 @font-face {
-    font-family: 'LeferiPoint-BlackObliqueA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiPoint-BlackObliqueA.woff') format('woff');
+    font-family: 'KOHIBaeumOTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'LeferiBaseType-RegularA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+/******* COMMON *******/
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.text {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: white;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/******* CONTAINER *******/
+
+* {
+    -webkit-user-drag: none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+}
+
+html {
+    font-size: 16px;
+    background-color: #030118;
 }
 
 body {
-    padding-bottom: 10rem;
+    overflow-x: hidden;
+    width: 100vw;
+    margin: 0;
 }
 
-.description {
-    flex-wrap: nowrap;
-    align-items: center;
-    padding: 2rem 0;
-    margin-bottom: 7rem;
+/******* MAIN CONTAINER *******/
+
+#main-container {
+    padding: 60px 0 50px 0;
+    background-image: url(./img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center ;
 }
 
-.description-imgs {
-    position: relative;
+.main-img {
+    display: block;
+    width: 100%;
+    margin: 0px auto;
+}
+
+#main-logo {
+    max-width: 230px;
+    margin-bottom: 10px;
+}
+
+#main-character { 
+    max-width: 400px;
+}
+
+/******* SUB CONTAINER *******/
+
+#sub-container {
+    background: linear-gradient(180deg, #030118 0%, #020114 35%, #01000a 100%);;
+    padding: 30px 50px 150px;
+}
+
+.sub-title {
+    font-family: KOHIBaeumOTF !important;
+    font-size: 2rem;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    color: #ff0b6c;
+}
+
+.sub-title:not(:first-child) {
+    margin-top: 100px;
+}
+
+/******* SUB CONTAINER - SYNPSIS *******/
+
+.synopsis-img {
+    position: relative; /* absolute는 부모가 relative일 때 부모를 따라간다. */
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 비율 */
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.synopsis-description {
+    padding-top: 20px;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    color: rgb(233, 233, 233);
+}
+
+.synopsis-description > strong {
+    font-size: 1.5rem;
+}
+
+
+
+/******* SUB CONTAINER - TRAILER *******/
+.trailer-video {
+    position: relative; /* absolute는 부모가 relative일 때 부모를 따라간다. */
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 비율 */
+}
+
+.trailer-video > iframe {
+    position: absolute;
+    width: 100%; /* 부모에 맞게 꽉 채운다. */
+    height: 100%;
+}
+
+.download-buttons {
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: column;
 }
 
-.flex-row > .description-imgs {
-    width: 10%;
-    flex-grow: 1;
-    flex-shrink: 1;
+.download-button {
+    display: flex;
+    background-color: #2a2637;
+    padding: 20px 0;
+    justify-content: center;
+    /* border: 3px solid #fff; */
+    border-radius: 10px;
+    transition: 0.5s ease;
+    align-items: center;
 }
 
-.description-img {
-    width: 0px;
-    flex-grow: 1;
+.download-button:hover {
+    background-color: #191733;
 }
 
-.description-texts {
-    width: fit-content;
-    flex: content;
-    white-space: nowrap;
-    margin-bottom: 1rem;
+.download-button-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
 }
 
-.description-text {
+.download-button:first-child {
+    margin-bottom: 20px;
+}
+
+/******* CAROUSEL *******/
+
+:root{
+    --numeberOfImages: 3;
+    --Seconds: 30s;
+  }
+
+.synopsis-img * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+.synopsis-img body {
+    background-color: coral;
+  }
+  
+.synopsis-img .container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    16.8% {
+      transform: translateX(0);
+    }
+    33.6% {
+      transform: translateX(-100%);
+    }
+    50.4% {
+      transform: translateX(-100%);
+    }
+    67.2% {
+      transform: translateX(-200%);
+    }
+    84% {
+        transform: translateX(-200%);
+      }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes mmo {
+    0% {
+      transform: translateX(-1.75rem);
+    }
+    100% {
+      transform: translateX(calc(1.75rem * (var(--numeberOfImages) - 1)));
+    }
+  }
+  
+.synopsis-img img {
+    width: 100%;
+  }
+.synopsis-img .wrapper {
+    transform: translateX(-200%);
+    width: 100%;
+    display: flex;
+    animation: slide var(--Seconds) infinite; 
+  }
+  
+  ol,
+.synopsis-img li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+.synopsis-img .backbt {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #333;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+  }
+.synopsis-img .listbt {
+    display: inline-block;
+  }
+.synopsis-img .caslnav {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
     text-align: center;
-}
-
-.description-text-main {
-    font-size: 3rem;
-    font-family: 'LeferiPoint-BlackObliqueA';
-}
-
-.description-text-sub {
-    color: #3d3d3d;
-    font-size: 1.5rem;
-    margin-bottom: -0.5rem;
-    font-family: 'LeferiBaseType-RegularA';
-}
-
-/* ID */
-
-#title > div {
-    font-size: 5rem !important;
-    margin: 6rem 0;
-}
-
-#youtube {
-    margin-top: 2rem;
-    margin-bottom: -3rem;
-    font-size: 1.5rem;
-    width: fit-content;
-}
-
-#youtube > svg {
-    width: 2rem;
-    height: fit-content;
-}
+  }
+  /*------------------*/
+.synopsis-img .curtbt {
+    display: inline-block;
+    /*
+    width: 1.25rem;
+    height: 1.25rem;
+    margin: 0.125rem;
+    */
+  
+    /*uncommment and use the above for diffrent style*/
+  
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0rem;
+  
+    background-color: white;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+  
+    animation: mmo var(--Seconds) steps(var(--numeberOfImages), start) infinite; 
+  }
+.synopsis-img .emptbt {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: transparent;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    font-size: 0;
+  }
