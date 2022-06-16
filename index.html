@@ -32,11 +32,18 @@
     <div id="main-container">
         <img id="main-logo" class="main-img" src="./img/logo.png">
         <img id="main-character" class="main-img" src="./img/character.png">
+        <div id="main-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="#292540"
+                class="bi bi-arrow-down-square-fill" viewBox="0 0 16 16">
+                <path
+                    d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm6.5 4.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5a.5.5 0 0 1 1 0z" />
+            </svg>
+        </div>
     </div>
 
     <div id="sub-container">
         <div class="sub-title text">Synopsis</div>
-        <div class="synopsis-img">
+        <div class="synopsis-img ratio-16-9">
             <div class="container">
                 <div class="wrapper">
                     <img src="./img/synopsis1.png" /><!-- photo -->
@@ -46,13 +53,13 @@
             </div>
         </div>
         <div class="synopsis-description text">
-            모종의 사건으로 조선에서 현대로 떨어진 무사 <strong>아랑</strong><br>
+            조선에서 현대로 떨어진 무사 <strong>아랑</strong><br>
             스스로를 정부 소속 비밀요원이라 칭하는 <strong>민석</strong><br>
-            뒤틀린 시간을 돌려놓기 위해 <strong>적진으로!</strong>
+            <strong>뒤틀린 시간을 돌려놓기 위해 적진으로!</strong>
         </div>
 
         <div class="sub-title text">Trailer</div>
-        <div class="trailer-video">
+        <div class="trailer-video ratio-16-9">
             <iframe src="https://www.youtube.com/embed/JY2UAUP4v94?showinfo=0" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -62,7 +69,8 @@
         <div class="sub-title text">Download</div>
         <div class="download-buttons">
 
-            <a href="https://naver.com" target="_blank" class="download-button">
+            <a href="https://github.com/yucheon6000/express-agent/releases/download/release/Express.Agent.Windows.zip"
+                target="_blank" class="download-button">
                 <div class="download-button-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                         fill="white" class="bi bi-microsoft" viewBox="0 0 16 16">
                         <path
@@ -71,7 +79,8 @@
                 <span class="text">Windows</span>
             </a>
 
-            <a href="https://naver.com" target="_blank" class="download-button">
+            <a href="https://github.com/yucheon6000/express-agent/releases/download/release/Express.Agent.Mac.zip"
+                target="_blank" class="download-button">
                 <div class="download-button-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-apple"
                         viewBox="0 0 16 16">
@@ -86,8 +95,9 @@
         </div>
     </div>
 
-    <div id="footer"></div>
-
+    <div id="footer">
+        copyrightⓒ 2022 All rights reserved by Express Agent
+    </div>
 </body>
 
 </html>

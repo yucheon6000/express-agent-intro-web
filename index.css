@@ -67,11 +67,16 @@ body {
     max-width: 400px;
 }
 
+#main-arrow {
+    width: 40px;
+    margin: 0 auto;
+}
+
 /******* SUB CONTAINER *******/
 
 #sub-container {
     background: linear-gradient(180deg, #030118 0%, #020114 35%, #01000a 100%);;
-    padding: 30px 50px 150px;
+    padding: 30px 20px 150px;
 }
 
 .sub-title {
@@ -98,16 +103,14 @@ body {
 
 .synopsis-description {
     padding-top: 20px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 2.5rem;
     color: rgb(233, 233, 233);
 }
 
 .synopsis-description > strong {
-    font-size: 1.5rem;
+    font-size: 1.1em;
 }
-
-
 
 /******* SUB CONTAINER - TRAILER *******/
 .trailer-video {
@@ -150,6 +153,55 @@ body {
 
 .download-button:first-child {
     margin-bottom: 20px;
+}
+
+/******* FOOTER *******/
+#footer {
+    background: #01000a;
+    color: rgb(233, 233, 233);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+}
+
+/******* CAROUSEL *******/
+@media (min-width: 768px) {
+    #main-arrow {
+        display: none;
+    }
+
+    #sub-container {
+        /* width: 500px;
+        margin: 0 auto; */
+    }
+
+    #sub-container > *{
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    #sub-container > .ratio-16-9{ 
+        padding-bottom: calc(700px * 0.5625); /* 16:9 비율 */
+    }
+
+    .synopsis-description {
+        font-size: 1.5rem;
+        line-height: 3rem;
+    }
+
+    .download-buttons {
+        flex-direction: row;
+    }
+
+    .download-button {
+        flex-grow: 1;
+    }
+
+    .download-button:first-child {
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
 }
 
 /******* CAROUSEL *******/
