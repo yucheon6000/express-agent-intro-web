@@ -156,6 +156,7 @@ body {
 }
 
 .download-button {
+    position: relative;
     display: flex;
     background-color: #2a2637;
     padding: 20px 0;
@@ -178,6 +179,14 @@ body {
 
 .download-button:not(:last-child) {
     margin-bottom: 20px;
+}
+
+.download-button-title {
+  position: relative;
+}
+
+.download-button-desc {
+  font-size: 0.5rem;
 }
 
 /******* FOOTER *******/
