@@ -192,9 +192,13 @@ body {
 /******* FOOTER *******/
 #footer {
     background: #01000a;
+    padding: 20px;
+    float: right;
+  }
+  
+#footer .text {
     color: #2a2637;
     text-align: center;
-    padding: 20px;
     font-size: 0.8rem;
 }
 

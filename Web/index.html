@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="kr">
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Unity WebGL Player | Express Agent</title>
+  <title>Express Agent | Web</title>
   <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png">
@@ -77,11 +77,11 @@
     }
 
     var buildUrl = "Build";
-    var loaderUrl = buildUrl + "/Web.loader.js";
+    var loaderUrl = buildUrl + "/Web.loader.js?a=1";
     var config = {
-      dataUrl: buildUrl + "/Web.data",
-      frameworkUrl: buildUrl + "/Web.framework.js",
-      codeUrl: buildUrl + "/Web.wasm",
+      dataUrl: buildUrl + "/Web.data?a=1",
+      frameworkUrl: buildUrl + "/Web.framework.js?a=1",
+      codeUrl: buildUrl + "/Web.wasm?a=1",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "team. Express Agent",
       productName: "Express Agent",
