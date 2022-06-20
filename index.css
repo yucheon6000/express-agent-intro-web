@@ -191,11 +191,19 @@ body {
 
 /******* FOOTER *******/
 #footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     background: #01000a;
     padding: 20px;
-    float: right;
   }
   
+#footer #team-logo {
+  width: 30px;
+  margin-bottom: 20px;
+}
+
 #footer .text {
     color: #2a2637;
     text-align: center;
@@ -244,11 +252,18 @@ body {
       margin-left: auto;
     }
 
-
     .download-button:not(:last-child) {
         margin-right: 30px;
         margin-bottom: 0;
     }
+
+    #footer {
+      flex-direction: row;
+    }
+    
+  #footer #team-logo {
+    margin-bottom: 0;
+  }
 }
 
 /******* CAROUSEL *******/
